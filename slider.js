@@ -35,13 +35,13 @@ var Slider = React.createClass({
     }
   },
 
-  getDragX: function(event, isTouch) {
+  getDragX(event, isTouch) {
     return isTouch ?
       event.touches[0].pageX :
       event.pageX;
   },
 
-  handleDragStart: function(event, isTouch) {
+  handleDragStart(event, isTouch) {
     const x = this.getDragX(event, isTouch);
 
     this.setState({
@@ -52,7 +52,7 @@ var Slider = React.createClass({
     });
   },
 
-  handleDragMove: function(event, isTouch) {
+  handleDragMove(event, isTouch) {
     const {
       dragStart,
       lastIndex,
@@ -76,7 +76,7 @@ var Slider = React.createClass({
     });
   },
 
-  handleDragEnd: function(isTouch) {
+  handleDragEnd() {
     const {
       children,
     } = this.props;
