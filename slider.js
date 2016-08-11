@@ -1,8 +1,11 @@
+// ES6 import
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 
+// ES6 class
 class Slider extends Component {
 
+  // constructor
   constructor (props) {
     super(props)
     this.state = {
@@ -24,6 +27,8 @@ class Slider extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
+    // always reset so slider with new, possibly less,
+    // amount of items starts at 0
     this.goToSlide(nextProps.selected)
   }
 
@@ -154,6 +159,8 @@ class Slider extends Component {
     } = this.props
     const { lastIndex } = this.state
     let arrowsClasses = showNav ? 'Slider-arrows' : 'Slider-arrows Slider-arrows--noNav'
+
+    // if only 1 item then hide arrows
     if(children.length < 2) {
       arrowsClasses = arrowsClasses + ' hide'
     }
@@ -210,21 +217,23 @@ class Slider extends Component {
     )
   }
 
-}
+  // ES6 static props
+  static propTypes = {
+    children: PropTypes.array,
+    loop: PropTypes.bool,
+    selected: PropTypes.number,
+    showArrows: PropTypes.bool,
+    showNav: PropTypes.bool
+  }
+  
+  // ES6 static props
+  static defaultProps = {
+    loop: false,
+    selected: 0,
+    showArrows: true,
+    showNav: true
+  }
 
-Slider.propTypes = {
-  children: PropTypes.array,
-  loop: PropTypes.bool,
-  selected: PropTypes.number,
-  showArrows: PropTypes.bool,
-  showNav: PropTypes.bool
-}
-
-Slider.defaultProps = {
-  loop: false,
-  selected: 0,
-  showArrows: true,
-  showNav: true
 }
 
 export default Slider
