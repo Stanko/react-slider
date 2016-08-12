@@ -181,7 +181,7 @@
           transform: rotate(30deg);
 }
 
-.hide {
+.Hide {
   display: none;
   visibility: hidden;
 }
