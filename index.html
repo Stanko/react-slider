@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>React slider</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="stylesheet" href="//stanko.github.io/skyblue/css/skyblue.css">
+	<link rel="stylesheet" href="main.css">
+
+	<style>
+		.ExampleSliders .Slider-slides > div {
+			padding: 100px 0;
+			font-size: 100px;
+			line-height: 100px;
+			height: 300px;
+			color: #fff;
+			text-align: center;
+		}
+
+		.Slider {
+			margin: 15px 0 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container margin-y-40">
+		<h1>React slider</h1>
+		<p>
+			Simple, no bull***t React slider component with touch support and 0 dependencies.
+			Just put your slides in it. Modern browsers and IE10+
+			(IE9 should work, but as flex is not supported you'll need to change CSS).
+		</p>
+
+		<h5 class="margin-bottom-20"><a href="https://github.com/Stanko/react-slider">Download on GitHub</a></h5>
+
+		<div id="slider1"></div>
+
+		<h3>Features</h3>
+		<ul>
+			<li>Lightweight, <i>no dependencies</i></li>
+			<li>Navigation, pager and arrows</li>
+			<li>Swipe support, with velocity detection</li>
+			<li>Easily customizable ~200 LOC</li>
+		</ul>
+
+		<h3>Usage</h3>
+		<p>
+			Include JS/CSS files, and in your React app wrap you slider in
+			<code>&lt;Slider></code> Component.
+		</p>
+<pre>
+&lt;<span class="color-error">Slider</span>>
+  {/* Slides */}
+  &lt;<span class="color-error">div</span>> A &lt;/<span class="color-error">div</span>>
+  &lt;<span class="color-error">div</span>> B &lt;/<span class="color-error">div</span>>
+  &lt;<span class="color-error">div</span>> C &lt;/<span class="color-error">div</span>>
+&lt;/<span class="color-error">Slider</span>>
+</pre>
+		<h3>Default props</h3>
+		<ul>
+			<li><code>loop: false</code> - Should arrow navigation loop around</li>
+			<li><code>selected: 0</code> - Slide to be selected</li>
+			<li><code>showArrows: true</code> - Show arrows navigation</li>
+			<li><code>showNav: true</code> - Show pager navigation</li>
+		</ul>
+		<p>
+			Any of the props can be dynamically changed.
+		</p>
+<pre>
+&lt;<span class="color-error">Slider</span>
+  <span class="color-main">loop</span>={ <span class="color-success">false</span> }
+  <span class="color-main">selected</span>={ <span class="color-success">0</span> }
+  <span class="color-main">showArrows</span>={ <span class="color-success">true</span> }
+  <span class="color-main">showNav</span>={ <span class="color-success">true</span> }>
+</pre>
+
+		<div id="slider2" class="margin-top-40"></div>
+	</div>
+
+	<script src="index.deployed.js"></script>
+</body>
+</html>
