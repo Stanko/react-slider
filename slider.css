@@ -180,3 +180,8 @@
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
+
+.Hide {
+  display: none;
+  visibility: hidden;
+}
